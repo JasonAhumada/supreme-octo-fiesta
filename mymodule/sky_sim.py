@@ -8,6 +8,7 @@ from random import uniform
 RA_STR = '00:42:44.4'
 DEC_STR = '41:16:08'
 NSRC = 1_000_000
+RADIUS = 1
 
 def make_positions():
     
@@ -29,7 +30,7 @@ def make_positions():
         decs.append(dec + uniform(-1,1))
 
     # apply our filter
-    ras, decs = crop_to_circle(ras,decs)
+    ras, decs = crop_to_circle(ras,decs, ra, dec, RADIUS)
 
     return ras, decs
 
@@ -63,7 +64,7 @@ def crop_to_circle(ras, decs, ref_ra, ref_dec, radius):
 def save_positions(ras, decs):
     with open('catalog.csv', 'w', encoding='utf-8') as f:
         print("id,RA,DEC", file=f)
-        for i in range(NSRC):
+        for i in range(len(ras)):
             print(f"{i:07d}, {ras[i]:12f}, {decs[i]:12f}", file=f)
 
 def main():
