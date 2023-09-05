@@ -40,5 +40,8 @@ def main():
     ras, decs = make_positions()
     save_positions(ras, decs)
 
+def clip_to_radius():
+    return
+
 if __name__ == "__main__":
     main()
