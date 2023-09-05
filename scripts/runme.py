@@ -1,0 +1,6 @@
+#! /usr/bin/env python
+from mymodule import sky_sim    
+
+sky_sim.main()
+
+print("RUN SCRIPT RAN")
