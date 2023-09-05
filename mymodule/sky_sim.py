@@ -5,8 +5,8 @@ from math import cos, pi
 from random import uniform
 
 # from wikipedia
-RA_STR = '00:42:44.3'
-DEC_STR = '41:16:09'
+RA_STR = '00:42:44.4'
+DEC_STR = '41:16:08'
 NSRC = 1_000_000
 
 def make_positions():
