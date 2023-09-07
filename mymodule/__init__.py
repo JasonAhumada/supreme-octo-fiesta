@@ -1,4 +1,2 @@
-print(f"Hello from {__name__}")
+"""This is the simulation package for simulating stars"""
 
-def func():
-    print("You just ran the function called `func` from module `mymodule`")
